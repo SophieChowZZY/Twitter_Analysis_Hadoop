@@ -1,23 +1,32 @@
-OUTPUT=result/J1
 TEMP=wc_tmp
-INPUTPATH=data/T.txt
+INPUTPATH=data/trump.txt
 KVAL=10
 
-tfidf: tfidf.jar
-	hdfs dfs -rm -r -f $(OUTPUT)
-	hadoop jar $< $(basename $<) $(INPUTPATH) $(OUTPUT)
+t_analysis_1: t_analysis_1.jar
+	hadoop jar $< $(basename $<) $(INPUTPATH) 
+
+tweet_analysis: tweet_analysis.jar
+	hadoop jar $< $(basename $<) $(INPUTPATH) 
+
+preprocess: preprocess.jar 
+	hadoop jar $< $(basename $<) $(INPUTPATH) 
 
 stopword: stopword.jar
 	hdfs dfs -rm -r -f $(OUTPUT)
-	hadoop jar $< $(basename $<) $(INPUTPATH) $(OUTPUT)
+	hadoop jar $< $(basename $<) $(INPUTPATH) 
 
 lemma: lemma.jar
-	hdfs dfs -rm -r -f $(OUTPUT)
-	hadoop jar $< $(basename $<) $(INPUTPATH) $(OUTPUT)
+	hadoop jar $< $(basename $<) $(INPUTPATH) 
+
+TFIDF: TFIDF.jar
+	hdfs dfs -rm -r -f $(result/WordCount)
+	hdfs dfs -rm -r -f $(result/DocSize)
+	hdfs dfs -rm -r -f $(result/TFIDF)
+	hadoop jar $< $(basename $<) $(INPUTPATH)
 
 sentiment: sentiment.jar
 	hdfs dfs -rm -r -f $(OUTPUT)
-	hadoop jar $< $(basename $<) $(INPUTPATH) $(OUTPUT)
+	hadoop jar $< $(basename $<) $(INPUTPATH) 
 
 WordCount: WordCount.jar
 	hdfs dfs -rm -r -f $(OUTPUT)
