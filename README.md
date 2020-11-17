@@ -1,6 +1,6 @@
 # Twitter_Analysis_Hadoop
 ## For CS4480 Group Project
-This repo stores the code for doing the Twitter Sentiment Analysis on Hadoop and Pig Latin. Also, the fetch tweet using Twitter Developer Account and snscrape on Python. These files are created and updated by me. <br>
+The project utilized Python, Hadoop and PySpark to do the analysis. This repo stores the code for doing the Twitter Sentiment Analysis on Hadoop and Pig Latin.  Also, the fetch tweet using Twitter Developer Account and snscrape on Python. These files are created and updated by me. <br>
 The Data file contains raw data and some datafile pre-processing python codes *(remark: The trump data is too big, it cannot be uploaded to GitHub)*; Dict contains the three dictionaries for NLP: stopwords, WordNetLemma, and AFINN. <br>
 The sentiment folder contains the MapReduce java file for doing all steps, named "tweet_analysis.java". <br>
 Despite that, the separate java files outside any folders are MapReduce for each particular job as I first tried to separate the process into different files. <br>
