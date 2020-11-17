@@ -15,7 +15,7 @@ Despite that, the separate java files outside any folders are MapReduce for each
 </ol>
 
 ### Discussion on using Hadoop
-Since our data is not very big, the MapReduce overheads can degrade the performance significantly. Also, since no one in the group knows Java, including me, it takes me a lot of effort to understand and implement the MapReduce Java programming. Given the performance of Hadoop, it may not be worthwhile to do that. Nevertheless, it is an excellent chance for me to learn and practice using Java.<br> 
+Since our data was not very big, the MapReduce overheads could degrade the performance significantly. Also, since no one in the group knows Java, including me, it took me a lot of effort to understand and implement the MapReduce Java programming. Given the performance of Hadoop, it might not be worthwhile to do that. Nevertheless, it was an excellent chance for me to learn and practice using Java.<br> 
 
-### End word for the course
+### End words
 It is happy to learn a lot of things within one semester. Although I was surprised that in the end, all these parallel computing fancy jargons might not beat the very beginning C++ in performance, it was a pleasant journey to known the development of the technology. :)
